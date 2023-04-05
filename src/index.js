@@ -16,6 +16,11 @@ body {
   color: #fff;
 }
 
+h2, h3, h4, h5, h6 {
+  font-size: 16px;
+  font-weight: 400;
+}
+
 a {
   text-decoration: none;
   color: inherit;

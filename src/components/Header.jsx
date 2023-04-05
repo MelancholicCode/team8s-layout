@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 import Logo from './Logo';
-import Container from './Container';
+import Container from './UI/Container';
 import arrowImg from "../img/arrow.svg";
 import burgerImg from "../img/burger.svg";
 
