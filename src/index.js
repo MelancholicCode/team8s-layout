@@ -15,6 +15,15 @@ body {
   font-family: NoirPro, serif;
   color: #fff;
 }
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+ul {
+  list-style: none;
+}
 `
 
 const root = ReactDOM.createRoot(document.getElementById('root'));

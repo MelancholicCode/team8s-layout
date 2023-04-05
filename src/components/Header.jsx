@@ -14,7 +14,7 @@ align-items: center;
 
 const BtnsWrapper = styled.div`
 position: absolute;
-left: 0;
+left: 15px;
 display: flex;
 align-items: center;
 gap: 16px;
@@ -43,16 +43,14 @@ p {
 
 const HeaderContainer = styled(Container)`
 position: relative;
-display: flex;
 width: 100%;
-max-width: 1168px;
 justify-content: center;
 `;
 
 const Header = () => {
   return (
     <HeaderEl>
-      <HeaderContainer>
+      <HeaderContainer display="flex" maxWidth="1168px">
         <BtnsWrapper>
           <BurgerBtn>
             <img width="100%" height="100%" src={burgerImg} alt="" />
