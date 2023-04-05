@@ -12,6 +12,7 @@ import githubIcon from "../../img/icons/github.svg";
 import behanceIcon from "../../img/icons/behance.svg";
 import telegramIcon from "../../img/icons/telegram.svg";
 import linkedinIcon from "../../img/icons/linkedin.svg";
+import crownImg from "../../img/crown.png";
 
 const StyledPage = styled.div`
 `;
@@ -41,10 +42,26 @@ gap: 24px;
 `;
 
 const AvatarWrapper = styled.div`
+position: relative;
+`;
+
+const AvatarImg = styled.img.attrs({
+  src: avatarImg
+})`
+display: block;
 border-radius: 50%;
 width: 100px;
 height: 100px;
-overflow: hidden;
+`;
+
+const Crown = styled.div`
+z-index: 1;
+position: absolute;
+top: -23px;
+right: -5px;
+width: 42px;
+height: 42px;
+background: url(${crownImg}) center center no-repeat;
 `;
 
 const NameWrapper = styled.div`
@@ -99,6 +116,8 @@ gap: 24px;
 `;
 
 const ProfilePage = () => {
+  const isLeader = true;
+
   const infoListArr = [
     {icon: userIcon, infoEl: <p>Front-end Developer</p>},
     {icon: starIcon, infoEl: <p>3-5 years of experience</p>},
@@ -119,7 +138,8 @@ const ProfilePage = () => {
         <ProfileSection width="270px" padding="36px 24px 24px">
           <UserInfo>            
             <AvatarWrapper>
-              <img src={avatarImg} alt="" width="100%" height="100%"/>
+              {isLeader && <Crown/>}
+              <AvatarImg/>
             </AvatarWrapper>
             <NameWrapper>
               <UserName>Nikita Maksimov</UserName>
