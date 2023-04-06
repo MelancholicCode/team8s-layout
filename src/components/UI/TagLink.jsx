@@ -1,4 +1,5 @@
 import styled from "styled-components";
+
 import Icon from "./Icon";
 
 const TagText = styled.p`
@@ -14,6 +15,10 @@ align-items: center;
 padding: 5px 8px;
 background-color: #2F3239;
 border-radius: 5px;
+transition: opacity .3s;
+&:hover {
+  opacity: 0.8;
+}
 `;
 
 const TagLink = ({src, to, children}) => {
