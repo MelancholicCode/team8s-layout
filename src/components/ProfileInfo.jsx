@@ -10,6 +10,7 @@ import * as icons from "../img/icons";
 
 const UserInfo = styled.div`
 display: flex;
+width: 100%;
 flex-direction: column;
 align-items: center;
 gap: 24px;
@@ -56,6 +57,7 @@ align-items: center;
 justify-content: center;
 gap: 6px;
 width: 100%;
+max-width: 300px;
 background: transparent;
 padding: 10px 0;
 border: 2px solid #46A11B;
@@ -64,13 +66,18 @@ transition: background-color .3s;
 &:hover {
   background-color: rgba(250, 250, 250, 0.05);
 }
+@media (max-width: 576px) {
+  max-width: none;
+}
 `;
 
 const InfoList = styled.ul`
-margin-top: 32px;
 display: flex;
 flex-direction: column;
 gap: 9px;
+@media (max-width: 576px) {
+  align-self: flex-start;
+}
 `;
 
 const InfoListItem = styled.li`
@@ -91,14 +98,11 @@ flex-wrap: wrap;
     opacity: .6;
   }
 }
-@media (max-width: 768px) {
-  margin-top: 32px;
-}
 `;
 
 const ProfileInfo = ({isLeader, infoListArr, socialArr}) => {
   return (
-    <ProfileSection width="270px" padding="36px 24px 24px">
+    <ProfileSection width="270px" padding="36px 24px 24px" align="center" gap="32px">
       <UserInfo>            
         <AvatarWrapper>
           {isLeader && <Crown/>}

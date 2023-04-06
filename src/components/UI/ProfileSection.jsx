@@ -3,6 +3,8 @@ import styled from 'styled-components';
 const StyledProfileSection = styled.div`
 display: flex;
 flex-direction: column;
+align-items: ${props => props.align || "normal"};
+gap: ${props => props.gap || "0"};
 width: ${props => props.width || 'auto'};
 min-height: 600px;
 background-color: #1A1C22;
