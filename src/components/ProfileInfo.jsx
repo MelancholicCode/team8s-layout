@@ -57,7 +57,7 @@ align-items: center;
 justify-content: center;
 gap: 6px;
 width: 100%;
-max-width: 300px;
+max-width: 222px;
 background: transparent;
 padding: 10px 0;
 border: 2px solid #46A11B;
